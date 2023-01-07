@@ -1,0 +1,64 @@
+$icons-font: "icons";
+
+@font-face {
+    font-family: $icons-font;
+    src: url("../public/fonts/icons/icons.ttf?9621f268d396d6baaf6388de893321f8") format("truetype"),
+url("../public/fonts/icons/icons.woff?9621f268d396d6baaf6388de893321f8") format("woff"),
+url("../public/fonts/icons/icons.woff2?9621f268d396d6baaf6388de893321f8") format("woff2"),
+url("../public/fonts/icons/icons.svg?9621f268d396d6baaf6388de893321f8#icons") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icons-map: (
+    "arrow": "\f101",
+    "eyes": "\f102",
+    "facebook": "\f103",
+    "heard": "\f104",
+    "in": "\f105",
+    "instagram": "\f106",
+    "profile": "\f107",
+    "search": "\f108",
+    "shopping-cart": "\f109",
+    "twitter": "\f10a",
+);
+
+.icon-arrow:before {
+    content: map-get($icons-map, "arrow");
+}
+.icon-eyes:before {
+    content: map-get($icons-map, "eyes");
+}
+.icon-facebook:before {
+    content: map-get($icons-map, "facebook");
+}
+.icon-heard:before {
+    content: map-get($icons-map, "heard");
+}
+.icon-in:before {
+    content: map-get($icons-map, "in");
+}
+.icon-instagram:before {
+    content: map-get($icons-map, "instagram");
+}
+.icon-profile:before {
+    content: map-get($icons-map, "profile");
+}
+.icon-search:before {
+    content: map-get($icons-map, "search");
+}
+.icon-shopping-cart:before {
+    content: map-get($icons-map, "shopping-cart");
+}
+.icon-twitter:before {
+    content: map-get($icons-map, "twitter");
+}
