@@ -1,0 +1,19 @@
+{
+    "name": "shoppe",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "parcel './pages/*.html'",
+        "build": "parcel build",
+        "generate-icons": "fantasticon --normalize"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.8.2",
+        "parcel": "^2.8.2",
+        "fantasticon": "^2.0.0",
+        "posthtml-doctype": "^1.1.1",
+        "posthtml-include": "^1.7.4"
+    }
+}
