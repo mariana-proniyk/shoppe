@@ -1,0 +1,24 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($path + ".eot");
+        src: url($path + ".eot?#iefix") format("embedded-opentype"),
+            url($path + ".woff") format("woff"),
+            url($path + ".ttf") format("truetype"),
+            url($path + ".svg##{$font-name}") format("svg");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin flex-horizontal-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin section-visual-size {
+    border-top: $primary-border;
+    padding-top: 96px;
+    margin-bottom: 253px;
+}
