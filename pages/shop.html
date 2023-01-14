@@ -4,9 +4,36 @@
     <body>
         <include src="../components/header.html"></include>
         <section class="shop section-center">
-            <h2>Shop The Latest</h2>
             <div class="wrapper">
-                <div class="filter"></div>
+                <aside class="side-bar">
+                    <h2>Shop The Latest</h2>
+                    <div class="search">
+                        <input type="text" placeholder="Search..." />
+                        <i class="icon-search"></i>
+                    </div>
+                    <div class="dropdowns-wrapper">
+                        <include src="../components/dropdown.html"></include>
+                        <include src="../components/dropdown.html"></include>
+                    </div>
+                    <input type="text" class="range-slider-input" />
+                    <div class="price-range">
+                        <span>Price:</span>
+                    </div>
+                    <div class="switch">
+                        <div class="sale-switch">
+                            <div class="text">On sale</div>
+                            <input type="checkbox" id="switch" /><label
+                                for="switch"
+                            ></label>
+                        </div>
+                        <div class="stock-switch">
+                            <div class="text">In stock</div>
+                            <input type="checkbox" id="switch" /><label
+                                for="switch"
+                            ></label>
+                        </div>
+                    </div>
+                </aside>
                 <div class="list">
                     <include src="../components/product-item.html"></include>
                     <include src="../components/product-item.html"></include>
