@@ -49,6 +49,9 @@ h5 {
     border-radius: 6px;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-item {
@@ -102,6 +105,24 @@ h5 {
     &:hover {
         .actions {
             opacity: 1;
+        }
+    }
+}
+
+.range-slider {
+    .irs-line,
+    .irs-bar {
+        height: 2px;
+    }
+    .irs-bar {
+        background-color: black;
+    }
+    .irs-handle {
+        i {
+            height: 9px !important;
+            &:first-child {
+                background-color: black !important;
+            }
         }
     }
 }
@@ -276,10 +297,165 @@ h5 {
 .shop {
     @include section-visual-size;
     margin-bottom: 0;
-    .list {
+    .wrapper {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        .side-bar {
+            max-width: 261px;
+            width: 100%;
+            margin-right: 38px;
+            .search {
+                max-width: 261px;
+                border-bottom: 1px solid #d8d8d8;
+                margin-top: 42px;
+                display: flex;
+                padding-bottom: 10px;
+                input {
+                    width: 100%;
+                    border: none;
+                    font-size: 14px;
+                    line-height: 22px;
+                    outline: none;
+                    color: #707070;
+                }
+            }
+            .dropdowns-wrapper {
+                margin-top: 38px;
+                .dropdown {
+                    cursor: pointer;
+                    border: 1px solid #d8d8d8;
+                    border-radius: 4px;
+                    margin-bottom: 17px;
+                    position: relative;
+                    &.is-open {
+                        .list {
+                            display: block;
+                        }
+                    }
+                    .title {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: $primary-color;
+                        box-sizing: border-box;
+                        height: 50px;
+                        &:hover {
+                            background-color: #a18a68;
+                            color: white;
+                        }
+                        .text {
+                            padding: 14px;
+                        }
+                        i {
+                            margin-top: 14px;
+                            font-size: 8px;
+                            margin-right: 9px;
+                        }
+                    }
+                    .list {
+                        display: none;
+                        margin-top: 0;
+                        position: absolute;
+                        top: 49px;
+                        left: -1px;
+                        width: 100%;
+                        background: #fff;
+                        z-index: 10;
+                        border: 1px solid #d8d8d8;
+                        ul {
+                            width: 100%;
+                            li {
+                                border-top: 1px solid #d8d8d8;
+                                height: 34px;
+                                font-size: 13px;
+                                padding: 11px;
+                                box-sizing: border-box;
+                                &:hover {
+                                    background-color: #a18a68;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .range-slider-input {
+                margin-top: 25px;
+                height: 1px;
+            }
+            .price-range {
+                margin-top: 14px;
+                font-size: 14px;
+                line-height: 22px;
+                color: #707070;
+            }
+            .switch {
+                margin-top: 39px;
+                .sale-switch,
+                .stock-switch {
+                    margin-bottom: 51px;
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                    display: flex;
+                    justify-content: space-between;
+                    input[type="checkbox"] {
+                        height: 0;
+                        width: 0;
+                        visibility: hidden;
+                    }
+                    label {
+                        cursor: pointer;
+                        width: 33px;
+                        height: 20px;
+                        background: grey;
+                        display: block;
+                        border-radius: 100px;
+                        position: relative;
+                    }
+                    label:after {
+                        content: "";
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        width: 10px;
+                        height: 10px;
+                        background: #fff;
+                        border-radius: 90px;
+                        transition: 0.7s;
+                    }
+                    input:checked + label {
+                        background: #a18a68;
+                    }
+
+                    input:checked + label:after {
+                        left: calc(100% - 5px);
+                        transform: translateX(-100%);
+                    }
+
+                    label:active:after {
+                        width: 130px;
+                    }
+                }
+            }
+        }
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 84px;
+            .product-item {
+                max-width: 300px;
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+                .actions button {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 }
 
