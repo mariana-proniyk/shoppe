@@ -22,4 +22,35 @@ $(function () {
             .children(".text")
             .html($(this).text());
     });
+
+    $(".amount-input  .plus").on("click", function () {
+        const inputElement = $(this).siblings("input");
+        inputElement.val(Number(inputElement.val()) + 1);
+    });
+
+    $(".amount-input  .minus").on("click", function () {
+        const inputElement = $(this).siblings("input");
+        const value = Number(inputElement.val());
+        if (value > 1) {
+            inputElement.val(value - 1);
+        }
+    });
+
+    $(".icon-heard").on("click", function () {
+        $(this).addClass("is-liked");
+    });
+
+    $(".star .icon-star").on("click", function () {
+        const index = $(this).index();
+        $(this)
+            .parent()
+            .find(".icon-star")
+            .each(function (i) {
+                if (i <= index) {
+                    $(this).addClass("is-active");
+                } else {
+                    $(this).removeClass("is-active");
+                }
+            });
+    });
 });
