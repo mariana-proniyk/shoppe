@@ -53,6 +53,14 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+.black-button {
+    width: 500px;
+    background: #000000;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+}
 
 .product-item {
     margin-bottom: 86px;
@@ -109,6 +117,23 @@ h5 {
     }
 }
 
+.tab-content {
+    display: none;
+    &.is-open {
+        display: block !important;
+    }
+}
+
+.stars {
+    .icon-star {
+        color: #000000;
+        cursor: pointer;
+        &.is-active {
+            color: #a18a68;
+        }
+    }
+}
+
 .amount-input {
     background: #efefef;
     color: #707070;
@@ -146,12 +171,52 @@ h5 {
         }
     }
 }
+.form {
+    margin-bottom: 24px;
+    color: #707070;
+    .form-item {
+        position: relative;
+        margin-bottom: 40px;
+        border-bottom: solid 1px #ccc;
+        input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+            padding: 0 15px;
+            &:focus {
+                border-color: black;
+            }
+        }
+        label {
+            position: absolute;
+            cursor: text;
+            z-index: 2;
+            top: 13px;
+            left: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.form-item input:focus + label,
+.form-item input:valid + label {
+    font-size: 11px;
+    top: -5px;
+}
+.form-item input:focus + label {
+    color: black;
+}
 
 .main-header {
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
-    padding-bottom: 17px;
+    padding-bottom: 18px;
     .wrap {
         display: flex;
         font-weight: 400;
@@ -571,7 +636,38 @@ h5 {
 
 .product {
     margin-bottom: 250px;
-    .wrapper {
+    position: relative;
+    .message {
+        border-top: 2px solid #a18a68;
+        height: 68px;
+        background: #efefef;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        &.is-open {
+            opacity: 1;
+        }
+        .text {
+            font-size: 16px;
+            margin-left: 39px;
+            display: flex;
+            i {
+                color: #a18a68;
+                margin-right: 10px;
+            }
+        }
+        .button {
+            color: #a18a68;
+            border: none;
+            margin-right: 23px;
+        }
+    }
+    .products-wrapper {
         border-top: 1px solid #d8d8d8;
         padding-top: 128px;
         display: flex;
@@ -620,14 +716,6 @@ h5 {
             display: flex;
             margin-bottom: 19px;
             cursor: pointer;
-            .star {
-                .icon-star {
-                    &.is-active {
-                        color: #a18a68;
-                    }
-                }
-            }
-
             span {
                 margin-left: 24px;
                 color: #707070;
@@ -690,7 +778,8 @@ h5 {
             }
         }
     }
-    .comments {
+    .product-info {
+        position: relative;
         margin-top: 99px;
         color: #707070;
         margin-bottom: 96px;
@@ -703,15 +792,109 @@ h5 {
                 cursor: pointer;
                 padding-bottom: 34px;
                 border-bottom: 1px solid transparent;
+                &.is-active,
                 &:hover {
                     color: #000000;
                     border-color: #000000;
                 }
             }
         }
-        p {
-            margin-top: 34px;
-            color: #707070;
+
+        .tab-1,
+        .tab-2,
+        .tab-3 {
+            margin-top: 39px;
+        }
+
+        .tab-1 {
+            p {
+                color: #707070;
+            }
+        }
+        .tab-2 {
+            .filter {
+                margin-bottom: 15px;
+                span {
+                    color: $primary-color;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .tab-3 {
+            .reviews {
+                padding-top: 42px;
+                display: flex;
+                justify-content: space-between;
+                .coments {
+                    max-width: 580px;
+                    h5 {
+                        margin-bottom: 76px;
+                    }
+                    .item {
+                        padding-bottom: 39px;
+                        border-bottom: 1px solid #d8d8d8;
+                        &:last-child {
+                            border-bottom: none;
+                            margin-top: 24px;
+                        }
+                        .top {
+                            color: black;
+                            font-size: 20px;
+                            line-height: 26px;
+                            margin-bottom: 16px;
+                            span {
+                                font-size: 14px;
+                                line-height: 22px;
+                                color: #707070;
+                                margin-left: 16px;
+                            }
+                        }
+                    }
+                }
+                .reply {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    line-height: 22px;
+                    h5 {
+                        margin-bottom: 11px;
+                    }
+                    .sub-title {
+                        font-size: 13px;
+                        line-height: 30px;
+                        margin-bottom: 46px;
+                    }
+
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        .form-group {
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 8px;
+                            input {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .star-rating {
+                        margin-top: 46px;
+                        .stars {
+                            padding-top: 13px;
+                        }
+                    }
+                    .button {
+                        width: 123px;
+                        border: 1px solid #ffffff;
+                        border-radius: 4px;
+                        background: #000000;
+                        color: white;
+                        font-size: 16px;
+                        margin-top: 48px;
+                    }
+                }
+            }
         }
     }
     .similar-items {
@@ -723,5 +906,65 @@ h5 {
                 max-width: 380px;
             }
         }
+    }
+}
+.contact-bar {
+    margin-top: 125px;
+    margin-bottom: 253px;
+    @include flex-horizontal-center;
+    .message {
+        margin-top: 39px;
+        margin-bottom: 108px;
+        max-width: 482px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .form {
+        max-width: 900px;
+        width: 100%;
+        .name,
+        .email {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        .form-item {
+            max-width: 398px;
+            width: 100%;
+            &:last-child {
+                display: flex;
+                i {
+                    cursor: pointer;
+                    display: flex;
+                    font-size: 5px;
+                    margin-bottom: 18px;
+                    align-items: flex-end;
+                }
+            }
+        }
+        .form-message {
+            margin-top: 80px;
+            .form-item {
+                max-width: 900px;
+            }
+        }
+    }
+}
+
+.reset-password {
+    @include flex-horizontal-center;
+    margin-top: 128px;
+    margin-bottom: 253px;
+    .message {
+        margin-top: 39px;
+        margin-bottom: 76px;
+        max-width: 439px;
+        text-align: center;
+    }
+    .form {
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 64px;
     }
 }
