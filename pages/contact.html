@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include src="../components/head.html">{ "title": "Shop page" }</include>
+    <body>
+        <include src="../components/header.html"></include>
+        <section class="contact-bar section-center">
+            <h2>Contact Us</h2>
+            <div class="message">
+                Say Hello send us your thoughts about our products or share your
+                ideas with our Team!
+            </div>
+            <div class="form">
+                <div class="name">
+                    <div class="form-item">
+                        <input
+                            type="text"
+                            id="username"
+                            autocomplete="off"
+                            required
+                        />
+                        <label for="username">First name</label>
+                    </div>
+                    <div class="form-item">
+                        <input
+                            type="text"
+                            id="username"
+                            autocomplete="off"
+                            required
+                        />
+                        <label for="username">Last name</label>
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="form-item">
+                        <input
+                            type="text"
+                            id="email"
+                            autocomplete="off"
+                            required
+                        />
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-item">
+                        <input
+                            type="text"
+                            id="subject"
+                            autocomplete="off"
+                            required
+                        />
+                        <label for="subject">Subject</label>
+                        <i class="icon-arrow-bottom"></i>
+                    </div>
+                </div>
+                <div class="form-message">
+                    <div class="form-item">
+                        <input
+                            type="text"
+                            id="message"
+                            autocomplete="off"
+                            required
+                        />
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+            </div>
+            <button class="button black-button">SEND</button>
+        </section>
+        <include src="../components/footer.html"></include>
+    </body>
+</html>
