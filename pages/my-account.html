@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include src="../components/head.html">{ "title": "Shop page" }</include>
+    <body>
+        <include src="../components/header.html"></include>
+        <section class="account section-center">
+            <h2>My account</h2>
+            <div class="buttons">
+                <button class="button is-active">Sign in</button>
+                <button class="button">Register</button>
+            </div>
+            <div class="form">
+                <div class="form-item">
+                    <input type="text" id="email" autocomplete="off" required />
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-item">
+                    <input
+                        type="text"
+                        id="password"
+                        autocomplete="off"
+                        required
+                    />
+                    <label for="password">Password</label>
+                </div>
+                <div class="text">
+                    <div class="form-group">
+                        <input type="checkbox" id="html" />
+                        <label for="html"></label>
+                    </div>
+                    Remember me
+                </div>
+            </div>
+            <button class="button black-button">SIGN IN</button>
+            <div class="message">Have you forgotten your password?</div>
+        </section>
+        <include src="../components/footer.html"></include>
+    </body>
+</html>
