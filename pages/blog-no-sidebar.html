@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include src="../components/head.html">{ "title": "Shop page" }</include>
+    <body>
+        <include src="../components/header.html"></include>
+        <section class="blog-content section-center">
+            <div class="wrapper">
+                <h2>Fast Fashion, And Faster Fashion</h2>
+                <div class="date">
+                    by <span>ANNY JOHNSON</span> - October 8,2020
+                </div>
+                <img src="../public/images/blog-no-sidebar/Img 01.png" alt="" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam placerat, augue a volutpat hendrerit, sapien tortor
+                    faucibus augue, a maximus elit ex vitae libero. Sed quis
+                    mauris eget arcu facilisis consequat sed eu felis. Nunc sed
+                    porta augue. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Aliquam placerat, augue a volutpat
+                    hendrerit, sapien tortor faucibus augue, a maximus elit ex
+                    vitae libero. Sed quis mauris eget arcu facilisis consequat
+                    sed eu felis.
+                </p>
+                <include src="../components/article.html"></include>
+                <div class="connect">
+                    <div class="tags">
+                        Tags
+                        <div class="line"></div>
+                        <span>Fashion, Style, Season</span>
+                    </div>
+                    <div class="share">
+                        Share
+                        <div class="line"></div>
+                        <div class="networks">
+                            <a href=""><i class="icon-facebook"></i></a>
+                            <a href=""><i class="icon-instagram"></i></a>
+                            <a href=""><i class="icon-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply">
+                    <h3>Leave a reply</h3>
+                    <div class="message">
+                        Your email address will not be published. Required
+                        fields are marked *
+                    </div>
+                    <div class="form">
+                        <div class="form-item">
+                            <input
+                                type="text"
+                                id="username"
+                                autocomplete="off"
+                                required
+                            />
+                            <label for="username">Enter your name*</label>
+                            <i class="icon-criss-cross"></i>
+                        </div>
+                        <div class="form-item">
+                            <input
+                                type="text"
+                                id="email"
+                                autocomplete="off"
+                                required
+                            />
+
+                            <label for="email">Enter your Email*</label>
+                            <i class="icon-criss-cross"></i>
+                        </div>
+                        <div class="form-item">
+                            <input
+                                type="text"
+                                id="webside"
+                                autocomplete="off"
+                                required
+                            />
+
+                            <label for="webside">Enter your Website</label>
+                            <i class="icon-criss-cross"></i>
+                        </div>
+                        <div class="text">
+                            <div class="form-group">
+                                <input type="checkbox" id="html" />
+                                <label for="html"></label>
+                            </div>
+                            Save my name, email, and website in this browser for
+                            the next time I comment
+                        </div>
+                        <div class="comment">
+                            <label for="text">Your Comment*</label>
+                            <i class="icon-criss-cross"></i>
+                            <input
+                                type="text"
+                                id="text"
+                                autocomplete="off"
+                                required
+                            />
+                        </div>
+                        <button class="button black-button">
+                            POST COMMENT
+                        </button>
+                    </div>
+                </div>
+                <div class="comments">
+                    <h3>Comments(3)</h3>
+                    <div class="list">
+                        <include src="../components/comment-item.html">
+                        </include>
+                        <include
+                            src="../components/comment-item.html"
+                        ></include>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <include src="../components/footer.html"></include>
+    </body>
+</html>
