@@ -40,7 +40,7 @@ $(function () {
         $(this).addClass("is-liked");
     });
 
-    $(".star .icon-star").on("click", function () {
+    $(".stars .icon-star").on("click", function () {
         const index = $(this).index();
         $(this)
             .parent()
@@ -52,5 +52,54 @@ $(function () {
                     $(this).removeClass("is-active");
                 }
             });
+    });
+
+    $(".backet-card .button").on("click", function () {
+        $(".message").addClass("is-open");
+    });
+
+    $(".tabs-menu li").on("click", function () {
+        const tabMenuElement = $(this).parent();
+
+        tabMenuElement.find("li").each(function () {
+            $(this).removeClass("is-active");
+        });
+
+        $(this).addClass("is-active");
+
+        tabMenuElement
+            .parent()
+            .find(".tab-content")
+            .each(function () {
+                $(this).removeClass("is-open");
+            });
+
+        $(`.${$(this).data("idTab")}`).addClass("is-open");
+    });
+
+    $(".account .button").on("click", function () {
+        $(this)
+            .parent()
+            .find(".button")
+            .each(function () {
+                $(this).removeClass("is-active");
+            });
+
+        $(this).addClass("is-active");
+    });
+
+    $(".buttons-wrap .button").on("click", function () {
+        $(this)
+            .parent()
+            .find(".button")
+            .each(function () {
+                $(this).removeClass("is-active");
+            });
+
+        $(this).addClass("is-active");
+    });
+
+    $(".icon-criss-cross").on("click", function () {
+        $(this).parent().find("input").val("");
     });
 });
