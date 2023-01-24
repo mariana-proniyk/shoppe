@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <include src="../components/head.html">{ "title": "Shop page" }</include>
+    <body>
+        <include src="../components/header.html"></include>
+        <section class="account-menu section-center">
+            <h2>My Account</h2>
+            <div class="tabs-block">
+                <ul class="tabs-menu">
+                    <li class="is-active" data-id-tab="dashboard">Dashboard</li>
+                    <li data-id-tab="orders">Orders</li>
+                    <li data-id-tab="downloads">Downloads</li>
+                    <li data-id-tab="addresses">Addresses</li>
+                    <li data-id-tab="account-detail">Account details</li>
+                    <li data-id-tab="logout">Logout</li>
+                </ul>
+                <div class="tab-content dashboard is-open">
+                    <div class="wrap">
+                        <div class="greeting">
+                            Hello Vitatheme (not Vitatheme?
+                            <a href="../pages/my-account.html">Log out)</a>
+                        </div>
+                        <div class="message">
+                            From your account dashboard you can view your
+                            <span>recent orders,</span> manage your
+                            <span>shipping and billing addresses,</span> and
+                            edit your
+                            <span> password and account details.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content orders">
+                    <div class="message-orders">
+                        <div class="text">No order has been made yet.</div>
+                        <button class="button">BROWSE PRODUCT</button>
+                    </div>
+                </div>
+                <div class="tab-content downloads">
+                    <div class="message-orders">
+                        <div class="text">No downloads available yet.</div>
+                        <button class="button">BROWSE PRODUCT</button>
+                    </div>
+                </div>
+                <div class="tab-content addresses">
+                    <div class="address-wrap">
+                        <div class="billing-address">
+                            <h3>Billing Address</h3>
+                            <div class="username">
+                                <div class="form">
+                                    <div class="form-item">
+                                        <input
+                                            type="text"
+                                            id="username"
+                                            autocomplete="off"
+                                            required
+                                        />
+                                        <label for="username"
+                                            >First name*</label
+                                        >
+                                        <i class="icon-criss-cross"></i>
+                                    </div>
+                                    <div class="form-item">
+                                        <input
+                                            type="text"
+                                            id="username"
+                                            autocomplete="off"
+                                            required
+                                        />
+                                        <label for="username">Last name*</label>
+                                        <i class="icon-criss-cross"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form">
+                                <div class="form-item">
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="name">Company Name</label>
+                                    <i class="icon-criss-cross"></i>
+                                </div>
+                                <div class="form-item">
+                                    <!-- <input
+                                        type="text"
+                                        id="text"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="text">Country *</label> -->
+                                    <div class="dropdown">
+                                        <div class="title">
+                                            <div class="text">Country *</div>
+                                            <i class="icon-arrow-bottom"></i>
+                                        </div>
+                                        <div class="list">
+                                            <ul>
+                                                <li>USA</li>
+                                                <li>Ukraine</li>
+                                                <li>France</li>
+                                                <li>Poland</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- <i class="icon-arrow-bottom"></i> -->
+                                </div>
+                                <div class="form-item">
+                                    <input
+                                        type="text"
+                                        id="text"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="text">Street Address *</label>
+                                    <i class="icon-criss-cross"></i>
+                                </div>
+                                <div class="form-item">
+                                    <input
+                                        type="text"
+                                        id="text"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="text">Postcode / ZIP *</label>
+                                    <i class="icon-criss-cross"></i>
+                                </div>
+                                <div class="form-item">
+                                    <input
+                                        type="text"
+                                        id="text"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="text">Town / City *</label>
+                                    <i class="icon-criss-cross"></i>
+                                </div>
+                                <div class="form-item">
+                                    <input
+                                        type="text"
+                                        id="number"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="number">Phone *</label>
+                                    <i class="icon-criss-cross"></i>
+                                </div>
+                                <div class="form-item">
+                                    <input
+                                        type="text"
+                                        id="email"
+                                        autocomplete="off"
+                                        required
+                                    />
+                                    <label for="email">Email *</label>
+                                    <i class="icon-criss-cross"></i>
+                                </div>
+                            </div>
+                            <button class="button black-button">
+                                SAVE ADDRESS
+                            </button>
+                        </div>
+                        <div class="shipping-adress">
+                            <h3>Shipping Address</h3>
+                            <button class="button">ADD</button>
+                            <div class="message">
+                                You have not set up this type of address yet.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content account-detail">
+                    <div class="account-info">
+                        <h2>Account details</h2>
+                        <div class="form">
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="username"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="username">First name*</label>
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="username"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="username">Last name*</label>
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="username"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="username">Display name*</label>
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="email"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="email">Email address*</label>
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                            <h5>Password change</h5>
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="password"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="password"
+                                    >Current password (leave blank to leave
+                                    unchanged)</label
+                                >
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="password"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="password"
+                                    >New password (leave blank to leave
+                                    unchanged)</label
+                                >
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                            <div class="form-item">
+                                <input
+                                    type="text"
+                                    id="password"
+                                    autocomplete="off"
+                                    required
+                                />
+                                <label for="password"
+                                    >Confirm new password</label
+                                >
+                                <i class="icon-criss-cross"></i>
+                            </div>
+                        </div>
+                        <div class="button black-button">SAVE CHANGES</div>
+                    </div>
+                </div>
+                <div class="tab-content logout"></div>
+            </div>
+        </section>
+        <include src="../components/footer.html"></include>
+    </body>
+</html>
